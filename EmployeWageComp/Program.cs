@@ -8,25 +8,16 @@ namespace EmployeWageComp
 {
     internal class Program
     {
-        static void Main(string[] args)
+               static void Main(string[] args)
         {
-            int employePresent = 5;
+            Console.WriteLine("welcome to employe wage");
 
-            Random random = new Random();
-
-            int empCheck = random.Next(0, 6);
+            }
 
 
-            if (employePresent == empCheck)
+            
 
-                Console.WriteLine("Employe is present");
-
-
-            else
-                Console.WriteLine("Employe is absent");
-
+            Console.WriteLine("Total Employee wage (0) for (1) day and workingHrs:{3}",totalwage ,day -1,EMP_PER_HOUR,totalwage);
             Console.ReadLine();
-
-        }
     }
 }
