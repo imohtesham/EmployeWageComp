@@ -1,0 +1,5 @@
+﻿
+namespace Delegates
+{
+    internal class 
+}
