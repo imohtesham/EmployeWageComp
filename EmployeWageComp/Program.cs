@@ -8,30 +8,32 @@ namespace EmployeWageComp
 {
     public class Program
     {
+       public const int PART_TIME = 1;
+        public const int FULL_TIME = 2;
+        public const int PER_HOUR_RATE = 20;
+
         static void Main(string[] args)
         {
-            int PART_TIME = 1;
-            int FULL_TIME = 1;
-            int PER_HOUR_RATE = 20;
-
             int EMPHR = 0;
             int EMPWGE = 0;
 
             Random random = new Random();       
-            int empcheck = random.Next(0,2);
+            int empcheck = random.Next(0,3);
 
-            if(empcheck == PART_TIME)
+            switch (empcheck)
             {
-                EMPHR = 4;
+                case PART_TIME:
+                    EMPHR = 4;
+                    break;
+                case FULL_TIME:
+                    EMPHR= 8;
+                    break;
+                default:    
+                    EMPHR = 0;
+                    break;
             }
-            else if (empcheck == FULL_TIME)
-            {
-                EMPHR = 8;
-            }
-            else
-            {
-                EMPHR = 0;
-            }
+               
+
             EMPWGE = EMPHR * PER_HOUR_RATE;
             Console.WriteLine("emp wage :" + EMPWGE);
         }
