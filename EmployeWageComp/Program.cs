@@ -6,18 +6,42 @@ using System.Threading.Tasks;
 
 namespace EmployeWageComp
 {
-    internal class Program
+    public class Program
     {
-               static void Main(string[] args)
+        static void Main(string[] args)
         {
-            Console.WriteLine("welcome to employe wage");
+            int PART_TIME = 1;
+            int FULL_TIME = 1;
+            int PER_HOUR_RATE = 20;
 
+            int EMPHR = 0;
+            int EMPWGE = 0;
+
+            Random random = new Random();       
+            int empcheck = random.Next(0,2);
+
+            if(empcheck == PART_TIME)
+            {
+                EMPHR = 4;
             }
+            else if (empcheck == FULL_TIME)
+            {
+                EMPHR = 8;
+            }
+            else
+            {
+                EMPHR = 0;
+            }
+            EMPWGE = EMPHR * PER_HOUR_RATE;
+            Console.WriteLine("emp wage :" + EMPWGE);
+        }
+        
+           
+            
 
 
             
 
-            Console.WriteLine("Total Employee wage (0) for (1) day and workingHrs:{3}",totalwage ,day -1,EMP_PER_HOUR,totalwage);
-            Console.ReadLine();
+           
     }
 }
